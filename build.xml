@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<project name = "Building jar file" default="compile">
+
+<target name = "folder">
+<delete dir = "src/jar"/>
+</target>
+
+<target name = "compile" depends = "folder">
+<javac srcdir = "src/java" destdir="src/classes"/>
+<mkdir dir = "src/jar"/>
+<jar destfile="src/jar/helloworld.jar" basedir="src/classes"/>
+</target>
+
+</project>
+
